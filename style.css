@@ -1905,3 +1905,84 @@ p {
   color: var(--white);
   background-color: var(--primary-dark);
 }
+.text-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1;
+        padding: 8px 0;
+    }
+
+    .logo-main {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+        text-transform: none;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .logo-main::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #438234, #6abf69);
+        border-radius: 2px;
+    }
+
+    .logo-subtitle {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #e0e0e0;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-top: 4px;
+        opacity: 0.9;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .logo-main {
+            font-size: 2rem;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        
+        .text-logo {
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-main {
+            font-size: 1.8rem;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.75rem;
+        }
+    }
+
+    /* Animation on hover */
+    .navbar-brand:hover .logo-main {
+        transform: translateY(-1px);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-brand:hover .logo-subtitle {
+        color: #ffffff;
+        transition: color 0.3s ease;
+    }
